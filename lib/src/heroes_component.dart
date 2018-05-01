@@ -1,9 +1,11 @@
 import 'dart:async';
-import 'package:angular_router/angular_router.dart';
-import 'package:angular/angular.dart';
+
 import 'hero.dart';
 import 'hero_detail_component.dart';
 import 'hero_service.dart';
+
+import 'package:angular/angular.dart';
+import 'package:angular_router/angular_router.dart';
 
 @Component(
     selector: 'my-heroes',
@@ -11,7 +13,6 @@ import 'hero_service.dart';
     templateUrl: 'heroes_component.html',
     styleUrls: const ['heroes_component.css'],
     directives: const [CORE_DIRECTIVES, HeroDetailComponent])
-
 class HeroesComponent implements OnInit {
   final HeroService _heroService;
   final Router _router;
